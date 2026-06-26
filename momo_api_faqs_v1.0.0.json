@@ -1,0 +1,142 @@
+[
+  {
+    "category": "General Overview",
+    "questions": [
+      {
+        "question": "What are MoMo Open APIs?",
+        "answer": "MoMo Open APIs allow businesses to integrate Mobile Money capabilities into their systems including collecting payments (C2B), disbursing funds (B2C/B2B), managing wallet operations (cash-in/cash-out), and enabling services such as invoicing and notifications."
+      },
+      {
+        "question": "What type of platforms can integrate MoMo APIs?",
+        "answer": "MoMo APIs are designed for mobile applications, web platforms, and Mini Apps / PWAs. They are REST-based and use JSON payloads."
+      },
+      {
+        "question": "What are the main business benefits?",
+        "answer": "MoMo APIs enable revenue growth through merchant payments and commissions, support ecosystem expansion for developers and partners, and improve customer experience with seamless real-time payments."
+      }
+    ]
+  },
+  {
+    "category": "Payments & Transactions",
+    "questions": [
+      {
+        "question": "How does Request to Pay (C2B) work?",
+        "answer": "The customer selects a product, the merchant initiates a payment request, the customer receives a prompt, and enters their PIN to complete the payment."
+      },
+      {
+        "question": "What happens after initiating a payment request?",
+        "answer": "The API returns a 202 Accepted response. Final status is obtained via callback (recommended) or by polling the status API."
+      },
+      {
+        "question": "What transaction statuses should partners handle?",
+        "answer": "Partners should handle states such as PENDING, SUCCESSFUL, FAILED, and TIMEOUT."
+      },
+      {
+        "question": "How do disbursements work?",
+        "answer": "Businesses initiate transfers to customer wallets for use cases like salaries, commissions, and payouts."
+      },
+      {
+        "question": "Can payments be refunded?",
+        "answer": "Yes, using the refund API with the original transaction reference. Refunds are processed asynchronously."
+      }
+    ]
+  },
+  {
+    "category": "Wallet & Value-Added Services",
+    "questions": [
+      {
+        "question": "What is Cash-In?",
+        "answer": "Cash-in allows users to fund wallets or fintech apps via API-triggered deposits confirmed upon approval."
+      },
+      {
+        "question": "What is Cash-Out?",
+        "answer": "Cash-out allows users to withdraw funds initiated from an app and processed via API."
+      },
+      {
+        "question": "What are Invoice-based payments?",
+        "answer": "Businesses can create invoices, share invoice IDs, and customers can pay using MoMo channels such as USSD or apps."
+      },
+      {
+        "question": "Can MoMo support recurring payments?",
+        "answer": "Yes, using Pre-Approval APIs which enable subscription-based or recurring billing models."
+      }
+    ]
+  },
+  {
+    "category": "Integration & Technical Setup",
+    "questions": [
+      {
+        "question": "How do I authenticate with MoMo APIs?",
+        "answer": "You create an API user and API key, generate an access token, and use it in API requests."
+      },
+      {
+        "question": "What is the role of the access token?",
+        "answer": "It authorises API requests, has an expiry period, and must be refreshed periodically."
+      },
+      {
+        "question": "What headers are required for API calls?",
+        "answer": "Common headers include Authorization (Bearer token), X-Reference-Id, target environment, and subscription key."
+      }
+    ]
+  },
+  {
+    "category": "Callbacks & Notifications",
+    "questions": [
+      {
+        "question": "Why are callbacks important?",
+        "answer": "Callbacks provide real-time transaction updates, reduce the need for polling, and improve system reliability."
+      },
+      {
+        "question": "What does a callback payload contain?",
+        "answer": "It typically includes referenceId, status, amount, and transaction ID."
+      },
+      {
+        "question": "What should systems do when a callback is received?",
+        "answer": "Systems should update transaction status, notify users, and trigger fulfilment processes."
+      }
+    ]
+  },
+  {
+    "category": "Sandbox & Testing",
+    "questions": [
+      {
+        "question": "How does sandbox testing work?",
+        "answer": "Special test MSISDNs simulate success, failure, timeout, and pending scenarios."
+      },
+      {
+        "question": "Do sandbox transactions use real money?",
+        "answer": "No, sandbox testing does not use real financial transactions."
+      }
+    ]
+  },
+  {
+    "category": "Best Practices",
+    "questions": [
+      {
+        "question": "What are key integration best practices?",
+        "answer": "Use unique X-Reference-Id values, implement webhooks, validate MSISDNs, handle async states, and secure APIs with tokens."
+      },
+      {
+        "question": "What is the recommended architecture?",
+        "answer": "Typical layers include frontend apps, backend systems, MoMo API gateway, and MoMo core platform."
+      }
+    ]
+  },
+  {
+    "category": "Advanced & Operational",
+    "questions": [
+      {
+        "question": "How can fraud be reduced?",
+        "answer": "Use account validation APIs to verify MSISDN and wallet status before transactions."
+      },
+      {
+        "question": "What is a typical end-to-end payment journey?",
+        "answer": "Validate customer, request payment, receive callback, confirm transaction, fulfil service, and optionally issue refund."
+      },
+      {
+        "question": "How should partners handle failed transactions?",
+        "answer": "Retry failed transactions, notify users, implement fallback flows, and monitor callback failures."
+      }
+    ]
+  }
+]

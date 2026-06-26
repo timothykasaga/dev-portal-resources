@@ -1,0 +1,32 @@
+[
+  {
+    "category": "Payments and Collections",
+    "guides": [
+      {
+        "title": "Working with Payment References",
+        "description": "Learn how to generate and manage payment references using the Invoice API.",
+        "url": "https://momodevelopercommunity.mtn.com/getting-started-in-the-community-2/working-with-payment-references-a-guide-to-the-momo-invoice-api-400?tid=400&fid=2"
+      }
+    ]
+  },
+  {
+    "category": "Mini Apps/PWA",
+    "guides": [
+      {
+        "title": "PWA Integration Guide",
+        "description": "Ready to show case your App via our MoMo App, check out how to achieve this with the MoMo PWA Integrations",
+        "url": "https://momodevelopercommunity.mtn.com/momo-pwa-mini-app-integration-66/momo-pwa-integration-465?tid=465&fid=66"
+      }
+    ]
+  },
+  {
+    "category": "Advanced Services",
+    "guides": [
+      {
+        "title": "DJS (Dynamic Journey Services)",
+        "description": "Show case you customer journey on our MoMo USSD menu with the MoMo Dynamic Journey Service",
+        "url": "https://momodevelopercommunity.mtn.com/how-to-59/momo-open-api-channel-as-a-service-dynamic-journey-services-djs-223?tid=223&fid=59"
+      }
+    ]
+  }
+]
