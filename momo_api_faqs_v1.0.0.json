@@ -93,6 +93,10 @@
       {
         "question": "What should systems do when a callback is received?",
         "answer": "Systems should update transaction status, notify users, and trigger fulfilment processes."
+      },
+      {
+        "question": "How do I update my callback URL in production?",
+        "answer": "To update your callback URL in production, you must log into the Partner Portal using your integration account, remove the existing API User, and then create a new API User while providing the updated callback details (specifically the Payment Server URL and Provider Callback Host derived from your full callback URL). This process automatically generates a new API User and API Key, which must be updated in your application for the changes to take effect, and partners should be aware that this action may cause a temporary service interruption until the new credentials are configured."
       }
     ]
   },
